@@ -1,0 +1,11 @@
+pdf-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    filter: drop-shadow(5px 5px 5px #222222);
+  }
+
+  div#cdk-overlay-0 {
+    overflow-y: auto;
+}

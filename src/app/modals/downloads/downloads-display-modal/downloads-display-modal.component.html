@@ -1,0 +1,56 @@
+<form role="form" [formGroup]="pdfForm">
+    <h1 mat-dialog-title>Download Files</h1>
+    <div mat-dialog-content>
+        <p>{{data.title}}</p>
+    
+        <p>
+            <mat-form-field>
+                <div class="myfilebrowser">
+                  <mat-toolbar>
+                    <!-- Readonly Input to show File names -->
+                    <input matInput placeholder="Select Pdf" required/>
+
+                    <!-- Browse Button -->
+                    <button mat-flat-button color="primary">
+                      Browse
+                    </button>
+            
+                  </mat-toolbar>
+                  <!-- Fetch selected filed on change -->
+                  <input type="file" #UploadFileInput id="fileUpload" formControlName="fileUpload" name="fileUpload"
+                    multiple="multiple" accept="application/pdf" />
+            
+                </div>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field>
+                <div class="myfilebrowser">
+                  <mat-toolbar>
+                    <!-- Readonly Input to show File names -->
+                    <input matInput placeholder="Select zip files" />
+
+                    <!-- Browse Button -->
+                    <button mat-flat-button color="primary">
+                      Browse
+                    </button>
+            
+                  </mat-toolbar>
+                  <!-- Fetch selected filed on change -->
+                  <input type="file" #UploadFileInput id="fileUpload" formControlName="zipUpload" name="zipUpload"
+                    multiple="multiple" accept="application/zip" />
+            
+                </div>
+            </mat-form-field>
+        </p>
+
+        
+       
+        
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Close</button>
+        <button mat-button [mat-dialog-close]="" cdkFocusInitial (click)="addDownload()">Save</button>
+    </div>
+</form>
+

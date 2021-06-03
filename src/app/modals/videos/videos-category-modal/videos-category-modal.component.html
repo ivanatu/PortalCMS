@@ -1,0 +1,18 @@
+<form role="form" [formGroup]="categoryForm">
+    <h1 mat-dialog-title>CATEGORY</h1>
+    <div mat-dialog-content>
+        <p>{{data.title}}</p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Name of Category</mat-label>
+                <input matInput formControlName="categoryName">
+            </mat-form-field>
+        </p>   
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Close</button>
+        <button mat-button [mat-dialog-close]="" cdkFocusInitial (click)="addVideoCategory()">Save</button>
+    </div>
+</form>
+
+

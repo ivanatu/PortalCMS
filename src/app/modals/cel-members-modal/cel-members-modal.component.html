@@ -1,0 +1,32 @@
+<form role="form" [formGroup]="celForm">
+    <h1 mat-dialog-title>CEL Members</h1>
+    <div mat-dialog-content>
+        <p>{{data.title}}</p>
+
+        <!-- <p>
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastName">
+            </mat-form-field>
+        </p> -->
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="emailAddress">
+            </mat-form-field>
+        </p>
+        
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Close</button>
+        <button mat-button [mat-dialog-close]="" cdkFocusInitial (click)="addMember()">Save</button>
+    </div>
+</form>
+
+

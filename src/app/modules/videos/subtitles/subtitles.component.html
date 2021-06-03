@@ -1,0 +1,35 @@
+<button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+(click)="videos()">VIDEOS</button>
+<button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+(click)="categories()">CATEGORIES</button>
+<button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+>SUBTITLES</button>
+<mat-divider></mat-divider>
+
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+    <table class="table table-condensed">
+        <thead>
+          <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">Language</th>
+            <th scope="col">Video Name (Translated)</th> 
+            <!-- <th scope="col">Handle</th> -->
+            <th class="actions">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let subtitle of subtitleData">
+            <td>{{subtitle.languageID}}</td>
+            <td>{{subtitle.videoNameTranslated}}</td>
+            <td class="actions">
+                <!-- <button type="button" class="btn btn-info btn-action"><i class="fas fa-bars"></i>View Categories </button> -->
+                <button type="button" class="btn btn-primary btn-action" (click)="edit(subtitle)"><i class="fas fa-pen"></i>Edit </button>
+                <button type="button" class="btn btn-danger btn-action" (click)="delete(subtitle)"><i class="fas fa-trash-alt"></i>Delete </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<div class="btn-group dropup floating-action-button">
+    <button class="btn btn-success btn-circle" type="button" (click)="openDialogCategory()"><i class="material-icons pmd-sm">add</i></button>
+</div>

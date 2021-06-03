@@ -1,0 +1,24 @@
+<button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+    >VIDEOS</button>
+    <button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+    (click)="categories()">CATEGORIES</button>
+    <button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+    (click)="subtitles()">SUBTITLES</button>
+    
+ <mat-divider></mat-divider>
+ <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="25%" *ngFor="let video of videosData">
+    <video class="video-fluid z-depth-1" controls>
+      <!-- <source [src]= {{video.StreamingURL}} type="video/mp4" /> -->
+    </video>
+      <mat-card-actions>
+        <mat-icon (click)="edit(video)">edit</mat-icon>
+        <mat-icon (click)="delete(video)">delete</mat-icon>
+      </mat-card-actions>
+  </div>
+  
+</div>
+
+<div class="btn-group dropup floating-action-button">
+  <button class="btn btn-success btn-circle" type="button" (click)="openDialogvideos()"><i class="material-icons pmd-sm">add</i></button>
+</div>

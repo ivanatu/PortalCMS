@@ -1,0 +1,27 @@
+<button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+(click)="back()">BACK</button>
+   <!--  <button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+    >CATEGORIES</button> -->
+<!-- <h3>SECTIONS</h3> -->
+<mat-divider></mat-divider>
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="33%">
+      <mat-card class="mat-elevation-z4" >
+        <mat-card-header>
+          <!-- <mat-card-title>Mountains {{num}}</mat-card-title> -->
+        </mat-card-header>
+        <img mat-card-image src="../../../assets/4.jpg">
+        <mat-card-content>
+          
+        </mat-card-content>
+        <mat-card-actions>
+          <!-- <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button> -->
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="btn-group dropup floating-action-button">
+    <button class="btn btn-success btn-circle" type="button" (click)="openDialog()"><i class="material-icons pmd-sm">add</i></button>
+</div>

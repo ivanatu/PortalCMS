@@ -1,0 +1,38 @@
+<form role="form" [formGroup]="videoForm">
+    <h1 mat-dialog-title>Video</h1>
+    <div mat-dialog-content>
+        <p>{{data.title}}</p>
+       <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Video name</mat-label>
+                <input matInput formControlName="videoName" placeholder="Enter the video name">
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Select a video category</mat-label>
+                <mat-select formControlName="categoryID">
+                  <mat-option *ngFor="let videocategory of (dataVideoCategoryList$ | async)" [value]="videocategory.id">
+                    {{videocategory.categoryName}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Duration</mat-label>
+                <input matInput type="number" formControlName="duration" placeholder="Enter the duration">
+            </mat-form-field>
+        </p>
+        <p>
+             <mat-label>Select Videos</mat-label>
+            <input type="file" id="file" multiple (change)="getFileDetails($event)" accept="video/*" > 
+            <!-- <button class="btn btn-primary" (click)="uploadFiles()">Upload</button>   -->
+        </p>
+        
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Close</button>
+        <button mat-button [mat-dialog-close]="" cdkFocusInitial (click)="addVideo()">Save</button>
+    </div>
+</form>

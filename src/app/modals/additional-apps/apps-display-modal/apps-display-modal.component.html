@@ -1,0 +1,24 @@
+<!-- <form>
+    <h1 mat-dialog-title>ADDITIONAL APPS</h1>
+    <div mat-dialog-content>
+        <p>{{data.title}}</p>
+        <p>
+            <h3>Upload Either Image or Video</h3>
+            <input type="file" id="file" (change)="fileChangeEvent($event)" accept="image/video/*" >
+            <button class="btn btn-primary" (click)="addCategory()">Upload</button>
+        </p>
+        <!-- <p>
+            <mat-label>Upload Video</mat-label>
+            <input type="file" id="file" (change)="fileChangeEvent($event)" accept="image/*" > 
+        </p> 
+        
+    </div>
+    <!-- <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Close</button>
+        <button mat-button [mat-dialog-close]="" cdkFocusInitial (click)="addCategory()">Save</button>
+    </div>
+</form> -->
+
+<h3>Upload Either Image or Video</h3>
+<input type="file" id="file" (change)="fileChangeEvent($event)" accept="image/video/*" >
+<button class="btn btn-primary" (click)="addCategory()">Upload</button>

@@ -1,0 +1,45 @@
+<form role="form" [formGroup]="categoryForm">
+    <h1 mat-dialog-title>CATEGORY</h1>
+    <div mat-dialog-content>
+        <p>{{data.title}}</p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Name of Category</mat-label>
+                <input matInput formControlName="categoryName">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <input matInput formControlName="description">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Select a section</mat-label>
+                <mat-select formControlName="sectionID">
+                  <mat-option *ngFor="let downloadsection of (dataDownloadSectionList$ | async)" [value]="downloadsection.id">
+                      {{downloadsection.sectionName}}
+                    </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Insert External Download Link (option)</mat-label>
+                <input matInput formControlName="link">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-label>Upload Icon</mat-label>
+            <input type="file" id="file" (change)="fileChangeEvent($event)" accept="image/*" > 
+        </p>
+        
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Close</button>
+        <button mat-button [mat-dialog-close]="" cdkFocusInitial (click)="addCategory()">Save</button>
+    </div>
+</form>
+

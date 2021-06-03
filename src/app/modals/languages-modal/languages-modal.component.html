@@ -1,0 +1,29 @@
+<form role="form" [formGroup]="languageForm">
+    <h1 mat-dialog-title>LANGUAGE</h1>
+    <div mat-dialog-content>
+        <p>{{data.title}}</p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter full language name</mat-label>
+                <input matInput formControlName="fullName">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter short language name</mat-label>
+                <input matInput formControlName="shortName">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter language code</mat-label>
+                <input matInput formControlName="languageCode">
+            </mat-form-field>
+        </p>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Close</button>
+        <button mat-button [mat-dialog-close]="" cdkFocusInitial (click)="addLanguage()">Save</button>
+    </div>
+</form>

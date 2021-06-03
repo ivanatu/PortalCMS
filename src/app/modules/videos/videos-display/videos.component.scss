@@ -1,0 +1,36 @@
+.stats-cards {
+  .mat-card {
+    overflow: hidden;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+// iframe.embed-responsive-item {
+//   width: 100%;
+//   height: 100%;
+// }
+video {
+  max-width: 100%;
+  height: auto;
+}
+mat-card-actions.mat-card-actions {
+  float: right;
+}
+.mat-icon {
+  color: rgb(251 6 6 / 87%);
+  cursor: pointer;
+}
+
+.main .mat-primary.mat-stroked-button:not(.mat-button-disabled) {
+  border-color: var(--color-primary);
+  background-color: #ffffff;
+}
+button.btn.add-new-category {
+  border-color: red;
+  color: red;
+  background-color: #ffffff;
+  font-family: Open sans-serif;
+}

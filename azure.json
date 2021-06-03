@@ -1,0 +1,17 @@
+{
+  "hosting": [
+    {
+      "app": {
+        "project": "dashboard",
+        "target": "build",
+        "configuration": "production",
+        "path": "dist/dashboard"
+      },
+      "azureHosting": {
+        "subscription": "8a3c9937-6a15-4678-8f8a-615ec703f9e8",
+        "resourceGroupName": "InternalCommonResources",
+        "account": "cwscms"
+      }
+    }
+  ]
+}

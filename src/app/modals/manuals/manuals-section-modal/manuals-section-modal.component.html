@@ -1,0 +1,18 @@
+<form role="form" [formGroup]="sectionForm">
+    <h1 mat-dialog-title>SECTION</h1>
+    <div mat-dialog-content>
+        <p>{{data.title}}</p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Name of Section</mat-label>
+                <input matInput formControlName="sectionName">
+            </mat-form-field>
+        </p>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Close</button>
+        <button mat-button [mat-dialog-close]="" cdkFocusInitial (click)="addSection()">Save</button>
+    </div>
+</form>
+    

@@ -1,0 +1,68 @@
+.content {
+    padding: 16px;
+    display: flex;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+
+.products {
+    padding: 2rem;
+  }
+  
+  label, input {
+    display: block;
+  }
+  
+  label {
+    margin-bottom: 1rem;
+  }
+  
+  .loading {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .floating-action-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+   }
+   .actions{
+       text-align: right;
+   }
+
+   .btn-circle { 
+    width: 70px; 
+    height: 70px; 
+    padding: 10px 16px; 
+    border-radius: 35px; 
+    font-size: 12px; 
+    text-align: center; 
+    } 
+
+    .btn-action { 
+        // width: 50px;
+        margin-left: 4px;
+    } 
+
+    pdf-viewer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      filter: drop-shadow(5px 5px 5px #222222);
+    }
+    mat-card-content.mat-card-content {
+      height: 200px;
+  }
+  mat-card-actions.mat-card-actions {
+    /* float: right; */
+    text-align: end;
+}
+ 

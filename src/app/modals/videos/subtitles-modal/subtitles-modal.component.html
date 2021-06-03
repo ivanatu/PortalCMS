@@ -1,0 +1,37 @@
+<form role="form" [formGroup]="subtitleForm">
+    <h1 mat-dialog-title>Subtitle</h1>
+    <div mat-dialog-content>
+        <p>{{data.title}}</p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Language</mat-label>
+                <input matInput formControlName="languageID" placeholder="Enter the language">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Select the video</mat-label>
+                <mat-select formControlName="VideoID">
+                  <mat-option *ngFor="let video of (dataVideoList$ | async)" [value]="video.id">
+                      {{video.videoName}}
+                    </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Translated Video Name</mat-label>
+                <input matInput formControlName="videoNameTranslated" placeholder="Enter the name of the video">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-label>Upload Subtitle</mat-label>
+            <input type="file" id="file" (change)="fileChangeEvent($event)" accept=".vtt,pdf,.srt"> 
+        </p>
+        
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Close</button>
+        <button mat-button [mat-dialog-close]="" cdkFocusInitial (click)="addSubtitle()">Save</button>
+    </div>
+</form>

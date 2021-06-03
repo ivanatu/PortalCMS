@@ -1,0 +1,58 @@
+<button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+(click)="back()">BACK</button>
+   <!--  <button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+    >CATEGORIES</button> -->
+<!-- <h3>SECTIONS</h3> -->
+<mat-divider></mat-divider>
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <table class="table table-condensed">
+      <thead>
+        <tr>
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">Downloads Files</th>
+          <!-- <th scope="col">Last</th> -->
+          <!-- <th scope="col">Handle</th> -->
+          <th class="actions">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- <th scope="row">1</th> -->
+          <td onclick="location.href='yourpage.html'"><a href="https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf">Link</a></td>
+          <!-- <td>Otto</td> -->
+          <!-- <td>@mdo</td> -->
+          <td class="actions">
+              <!-- <button type="button" class="btn btn-info btn-action"><i class="fas fa-bars"></i>View Categories </button> -->
+              <!-- <button type="button" class="btn btn-primary btn-action" (click)="edit()"><i class="fas fa-pen"></i>Edit </button> -->
+              <button type="button" class="btn btn-danger btn-action" (click)="delete()"><i class="fas fa-trash-alt"></i>Delete </button>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">2</th> -->
+          <td onclick="location.href='yourpage.html'"><a href="https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf">Link</a></td>
+          <!-- <td>Thornton</td> -->
+          <!-- <td>@fat</td> -->
+          <td class="actions">
+              <!-- <button type="button" class="btn btn-info btn-action"><i class="fas fa-bars"></i>View Categories </button> -->
+              <!-- <button type="button" class="btn btn-primary btn-action" (click)="edit()"><i class="fas fa-pen"></i>Edit </button> -->
+              <button type="button" class="btn btn-danger btn-action" (click)="delete()"><i class="fas fa-trash-alt"></i>Delete </button>
+          </td>
+        </tr>
+        
+        <tr>
+          <!-- <th scope="row">3</th> -->
+          <td onclick="location.href='yourpage.html'"><a href="https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf">Link</a></td>
+          <!-- <td>the Bird</td> -->
+          <!-- <td>@twitter</td> -->
+          <td class="actions">
+              <!-- <button type="button" class="btn btn-info btn-action"><i class="fas fa-bars"></i>View Categories </button> -->
+              <!-- <button type="button" class="btn btn-primary btn-action" (click)="edit()"><i class="fas fa-pen"></i>Edit </button> -->
+              <button type="button" class="btn btn-danger btn-action" (click)="delete()"><i class="fas fa-trash-alt"></i>Delete </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+  <div class="btn-group dropup floating-action-button">
+    <button class="btn btn-success btn-circle" type="button" (click)="openDialogdownload()"><i class="material-icons pmd-sm">add</i></button>
+</div>

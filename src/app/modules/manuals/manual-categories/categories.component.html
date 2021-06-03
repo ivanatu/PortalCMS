@@ -1,0 +1,34 @@
+<button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+    (click)="sections()">SECTIONS</button>
+    <button class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary" color="accent"
+  >CATEGORIES</button>
+<!-- <h3>SECTIONS</h3> -->
+<mat-divider></mat-divider>
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">Manual Categories</th>
+            <!-- <th scope="col">Section</th> -->
+            <!-- <th scope="col">Handle</th> -->
+            <th class="actions">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let manualcategory of manualCategoryData">
+            <td>{{manualcategory.categoryName}}</td>
+            <!-- <td>Software Manual</td> -->
+            <td class="actions">
+                <button type="button" class="btn btn-info btn-action" (click)="viewPdf(manualcategory)"><i class="fas fa-bars"></i>View Pdfs </button>
+                <button type="button" class="btn btn-primary btn-action" (click)="edit(manualcategory)"><i class="fas fa-pen"></i>Edit </button>
+                <button type="button" class="btn btn-danger btn-action" (click)="delete(manualcategory)"><i class="fas fa-trash-alt"></i>Delete </button>
+            </td>
+          </tr>
+     
+        </tbody>
+      </table>
+</div>
+<div class="btn-group dropup floating-action-button">
+    <button class="btn btn-success btn-circle" type="button" (click)="openDialogCategory()"><i class="material-icons pmd-sm">add</i></button>
+</div>
